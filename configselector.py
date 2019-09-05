@@ -4,9 +4,9 @@ def _():
 	
 	import inspect
 	from sys import argv
-	from os.path import isfile
+	from os.path import isfile, dirname
 	
-	applicationDirectory = inspect.getfile( inspect.currentframe() )+"/../"
+	applicationDirectory = dirname(inspect.getfile(inspect.currentframe()))+"/"
 	parametersFile = applicationDirectory+"config/parameters.py"
 	sequenceFile   = applicationDirectory+"config/sequenceELM327_CAN.py"
 	
